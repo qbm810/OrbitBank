@@ -1,10 +1,10 @@
-- hosts: master
-  become: yes
-  tasks:
-    - name: Install Docker
-      apt:
-        name: docker.io
-        state: present
+#- hosts: master
+ # become: yes
+  #tasks:
+   # - name: Install Docker
+    #  apt:
+     #   name: docker.io
+      #  state: present
 
     #- name: Install kubeadm, kubelet, and kubectl
      # apt:
