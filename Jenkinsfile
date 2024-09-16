@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage("Download Resources with Ansible")
+            steps {
+                ansiblePlaybook inventory: '/home/smithbriana10gm/OrbitBank/dev.inv', playbook: '/home/smithbriana10gm/OrbitBank/playbook.yml', vaultTmpPath: ''
+            }
+    }
         stage('Build Frontend Image') {
             steps {
                 script {
